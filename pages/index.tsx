@@ -7,17 +7,17 @@ import { useEffect, useState } from "react";
 let didInit = false;
 const Home: NextPage = () => {
   const [counter, setCounter] = useState(364928407);
-  useEffect(() => {
-    if (!didInit) {
-      didInit = true;
-      const interval = setInterval(() => {
-        setCounter((prev) => prev + 1);
-      }, 5000);
-      () => {
-        clearInterval(interval);
-      };
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!didInit) {
+  //     didInit = true;
+  //     const interval = setInterval(() => {
+  //       setCounter((prev) => prev + 1);
+  //     }, 5000);
+  //     () => {
+  //       clearInterval(interval);
+  //     };
+  //   }
+  // }, []);
   return (
     <div className="container">
       <nav>
@@ -25,6 +25,7 @@ const Home: NextPage = () => {
         <div className="share">
           <span>Tell your friends </span>
           <Image
+            priority
             src={"/Share.svg"}
             width={16}
             height={22}
@@ -45,13 +46,13 @@ const Home: NextPage = () => {
         width={500}
         alt="Picture of a planet"
       />
-      <Image
+      {/* <Image
         priority
         className={style.ellipse}
         src={"/Ellipse.svg"}
         alt="Ellipse"
         layout="fill"
-      />
+      /> */}
     </div>
   );
 };

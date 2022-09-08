@@ -29,6 +29,9 @@
     align-items: center;
     gap: 32px;
     width: 100%;
+    @media screen and (max-width: 700px) {
+      gap: 20px;
+    }
     .inputGroup {
       display: flex;
       flex-direction: row;
@@ -38,5 +41,12 @@
         flex-direction: column;
       }
     }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--primary-surface);
+    font-weight: 700;
   }
 }
