@@ -27,15 +27,12 @@
   }
 }
 .planet {
-  position: absolute;
-  width: 500px;
-  height: 398.41px;
-  left: 470px;
-  top: 626px;
+  // -webkit-transform: translate3d(0, 0, 0);
   z-index: 1;
 }
 .ellipse {
-  position: absolute;
+  // -webkit-transform: translate3d(0, 0, 0);
+  // position: absolute;
   width: 2479px !important;
   height: 994px !important;
   top: 778px !important;
