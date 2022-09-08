@@ -38,6 +38,7 @@ const Home: NextPage = () => {
         <p>people know their 10,000th day on earth</p>
       </div>
       <Image
+        priority
         className={style.planet}
         src={"/planet.svg"}
         height={400}
@@ -45,6 +46,7 @@ const Home: NextPage = () => {
         alt="Picture of a planet"
       />
       <Image
+        priority
         className={style.ellipse}
         src={"/Ellipse.svg"}
         alt="Ellipse"
