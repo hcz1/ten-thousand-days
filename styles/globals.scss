@@ -55,8 +55,17 @@ nav {
     display: flex;
     align-items: center;
     gap: 16px;
+    @media screen and (max-width: 700px) {
+      span {
+        &:first-of-type {
+          display: none;
+        }
+      }
+    }
   }
   @media screen and (max-width: 700px) {
     margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 19px;
   }
 }

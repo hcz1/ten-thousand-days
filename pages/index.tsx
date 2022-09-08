@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <nav>
         <div>🌎 10,000 Days</div>
         <div className="share">
-          Tell your friends{" "}
+          <span>Tell your friends </span>
           <Image
             src={"/Share.svg"}
             width={16}
