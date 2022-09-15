@@ -35,67 +35,85 @@ const Form = () => {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [info, setInfo] = useState<State>();
-
+  const reset = useCallback(() => {
+    setName("");
+    setDate("");
+    setInfo(undefined);
+  }, []);
   const handleClick = useCallback(
     (e: React.SyntheticEvent) => {
       e.preventDefault();
       const birthdayUnix = new Date(date).getTime() / 1000;
       const currDays = howManyDaysSince(birthdayUnix);
       const { date: thatDay, age } = tenThousandthDay(birthdayUnix);
-
       setInfo({ date: thatDay, age, currDays });
     },
     [date]
   );
   return (
-    <div className={style.scene}>
-      <div className={style.card}>
-        <div className={classnames(style.form, style.cardFace)}>
-          <h1>
-            Enter your birthday to see what date will be your 10,000th day on
-            earth ✨
-          </h1>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
+    <div className={style.form}>
+      <h1>
+        Enter your birthday to see what date will be your 10,000th day on earth
+        ✨
+      </h1>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <div className={style.inputGroup}>
+          <Input
+            type="text"
+            placeholder="First Name"
+            onChange={(event) => {
+              setName(event.target.value);
             }}
-          >
-            <div className={classnames(style.inputGroup)}>
-              <Input
-                type="text"
-                placeholder="First Name"
-                onChange={(event) => {
-                  setName(event.target.value);
-                }}
-                value={name}
-              />
-              <Input
-                type="date"
-                onChange={(event) => {
-                  setDate(event.target.value);
-                }}
-                value={date}
-              />
-            </div>
-            <Button
-              title="Submit 💫"
-              type="submit"
-              onClick={(e) => {
-                if (name && date) {
-                  handleClick(e);
-                }
-              }}
-            />
-          </form>
-          {info && (
-            <div className={style.info}>
-              {<p>Age: {info?.age}</p>}
-              {<p>Date: {info?.date}</p>}
-              {<p>Days Alive: {info?.currDays}</p>}
-            </div>
-          )}
+            value={name}
+          />
+          <Input
+            type="date"
+            onChange={(event) => {
+              setDate(event.target.value);
+            }}
+            placeholder="yyyy-mm-dd"
+            value={date}
+          />
         </div>
-      </div>
+        <div className={style.btnGroup}>
+          <Button
+            title={
+              <div>
+                <span>Submit </span>
+                <span>💫</span>
+              </div>
+            }
+            type="submit"
+            onClick={(e) => {
+              if (name && date) {
+                handleClick(e);
+              }
+            }}
+          />
+          <Button
+            title={
+              <div>
+                <span>Reset </span>
+                <span>🔄</span>
+              </div>
+            }
+            disabled={!name && !date}
+            type="reset"
+            onClick={reset}
+          />
+        </div>
+      </form>
+      {info && (
+        <div className={style.info}>
+          {<p>Age: {info?.age}</p>}
+          {<p>10,000th day Date: {info?.date}</p>}
+          {<p>Days Alive: {info?.currDays}</p>}
+        </div>
+      )}
     </div>
   );
 };

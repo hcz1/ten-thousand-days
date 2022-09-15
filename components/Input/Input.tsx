@@ -16,6 +16,11 @@ const Input: React.FC<Props> = ({ type, value, placeholder, onChange }) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      max={
+        type === "date"
+          ? new Date().toLocaleDateString().split("/").reverse().join("-")
+          : undefined
+      }
     />
   );
 };
