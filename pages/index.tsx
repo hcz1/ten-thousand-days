@@ -48,6 +48,14 @@ const Home: NextPage = () => {
           alt="Picture of a planet"
         />
       </div>
+      <footer>
+        <a>
+          <span>Terms and Conditions</span>
+        </a>
+        <a>
+          <span>Privacy Policy</span>
+        </a>
+      </footer>
     </div>
   );
 };
