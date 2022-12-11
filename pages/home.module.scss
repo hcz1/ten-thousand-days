@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -67,5 +67,7 @@
     line-height: 12px;
     text-align: center;
     z-index: 999;
+    position: sticky;
+    bottom: 0;
   }
 }
