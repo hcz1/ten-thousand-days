@@ -1,16 +1,17 @@
+import { ReactNode } from "react";
 import Style from "./Button.module.scss";
 
 interface ButtonProps {
-  title: string;
+  title: ReactNode;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button: React.FC<ButtonProps> = ({ ...props }) => {
+const Button: React.FC<ButtonProps> = ({ title, ...props }) => {
   return (
     <button className={Style.button} {...props}>
-      <span>Submit</span>
-      <span>💫</span>
+      {title}
     </button>
   );
 };

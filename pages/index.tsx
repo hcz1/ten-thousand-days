@@ -3,6 +3,8 @@ import Image from "next/image";
 import style from "./home.module.scss";
 import Form from "../components/Form";
 import { useEffect, useState } from "react";
+import Head from "next/head";
+import Nav from "../components/Nav";
 
 let didInit = false;
 const Home: NextPage = () => {
@@ -19,39 +21,26 @@ const Home: NextPage = () => {
   //   }
   // }, []);
   return (
-    <div className="container">
-      <nav>
-        <div>🌎 10,000 Days</div>
-        <div className="share">
-          <span>Tell your friends </span>
-          <Image
-            priority
-            src={"/Share.svg"}
-            width={16}
-            height={22}
-            alt="Share button icon"
-          />
-        </div>
-      </nav>
+    <div className={style.container}>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
+      </Head>
+      <Nav />
       <Form />
       <div className={style.counter}>
         <p>{counter.toLocaleString()}</p>
         <p>people know their 10,000th day on earth</p>
       </div>
-      <Image
+      {/* <Image
         priority
         className={style.planet}
         src={"/planet.svg"}
         height={400}
         width={500}
         alt="Picture of a planet"
-      />
-      {/* <Image
-        priority
-        className={style.ellipse}
-        src={"/Ellipse.svg"}
-        alt="Ellipse"
-        layout="fill"
       /> */}
     </div>
   );

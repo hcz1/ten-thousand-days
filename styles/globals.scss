@@ -1,6 +1,6 @@
 @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 @import "./variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
 
@@ -21,51 +21,10 @@ a {
 * {
   box-sizing: border-box;
 }
-.container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px 30px 0 30px;
-  @media screen and (max-width: 700px) {
-    padding: 20px 16px 0 16px;
-  }
-}
 
 h1 {
   font-weight: 800;
   font-size: 32px;
   line-height: 39px;
   text-align: center;
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-between;
-  width: 100%;
-  color: var(--primary-surface);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-  .share {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    @media screen and (max-width: 700px) {
-      span {
-        &:first-of-type {
-          display: none;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 700px) {
-    margin-bottom: 30px;
-    font-size: 16px;
-    line-height: 19px;
-  }
 }
