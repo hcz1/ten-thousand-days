@@ -94,7 +94,7 @@ const Form = () => {
               }
             }}
           />
-          <Button
+          {/* <Button
             title={
               <div>
                 <span>Reset </span>
@@ -104,7 +104,7 @@ const Form = () => {
             disabled={!name && !date}
             type="reset"
             onClick={reset}
-          />
+          /> */}
         </div>
       </form>
       {info && (
