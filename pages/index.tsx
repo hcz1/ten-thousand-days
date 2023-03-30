@@ -4,6 +4,7 @@ import style from "./home.module.scss";
 import Form from "../components/Form";
 import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
+import planet from "../public/planet.svg";
 
 let didInit = false;
 const Home: NextPage = () => {
@@ -27,14 +28,14 @@ const Home: NextPage = () => {
         <p>{counter.toLocaleString()}</p>
         <p>people know their 10,000th day on earth</p>
       </div>
-      {/* <Image
+      <Image
         priority
         className={style.planet}
-        src={"/planet.svg"}
-        height={400}
-        width={500}
+        src={planet}
+        // height={400}
+        // width={500}
         alt="Picture of a planet"
-      /> */}
+      />
     </div>
   );
 };
