@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   padding: 56px 80px 20px 80px;
   @media screen and (max-width: 700px) {
     padding: 20px 16px 20px 16px;
@@ -42,6 +43,8 @@
   .planet {
     z-index: 1;
     object-fit: contain;
+    width: 320px;
+    height: 253.25px;
   }
   .ellipseContainer {
     width: 100%;

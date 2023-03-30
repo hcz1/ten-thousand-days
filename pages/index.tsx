@@ -33,8 +33,8 @@ const Home: NextPage = () => {
         priority
         className={style.planet}
         src={planet}
-        // height={400}
-        // width={500}
+        height={253.25}
+        width={320}
         alt="Picture of a planet"
       />
       <div className={style.ellipseContainer}>
