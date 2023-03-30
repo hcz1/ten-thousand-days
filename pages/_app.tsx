@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Your 10,000th Day</title>
         <meta property="og:title" content="Your 10,000th Day" key="title" />
         <meta
-          property="og:description"
+          name="description"
           content="Find out which date your 10,000th day of life falls on"
           key="description"
         />
