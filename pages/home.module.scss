@@ -1,0 +1,35 @@
+.counter {
+  color: var(--primary-surface);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 40px 0;
+  p {
+    &:first-of-type {
+      font-weight: 800;
+      font-size: 64px;
+      line-height: 77px;
+    }
+    &:last-of-type {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+.planet {
+  position: absolute;
+  width: 500px;
+  height: 398.41px;
+  left: 470px;
+  top: 626px;
+  z-index: 1;
+}
+.ellipse {
+  position: absolute;
+  width: 2479px !important;
+  height: 994px !important;
+  top: 778px !important;
+  z-index: 0;
+}

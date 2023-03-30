@@ -1,0 +1,43 @@
+// Palette
+$palette-white: #ffffff;
+$palette-hint-mint: #f5fffe;
+$palette-dark-charcoal: #333333;
+$palette-depressive-sky: #429a98;
+$palette-behind-sky: #57ccc9;
+$palette-cyan-dream: #2c6665;
+$palette-peach-kisser: #ec706b;
+
+$Inter: "Inter", sans-serif;
+$mobile-width: 1143px;
+
+:root {
+  @extend %theme-base;
+}
+
+%theme-base {
+  // display
+  --mobile-breakpoint: #{$mobile-width};
+  // Typography
+  --font-family-default: #{$Inter};
+  // Page Colors
+  --color-fg: #{$palette-white};
+  --color-bg: #{$palette-hint-mint};
+  --primary-surface: #{$palette-depressive-sky};
+  --primary-tint: #{$palette-behind-sky};
+  --primary-shade: #{$palette-cyan-dream};
+  // Buttons
+  --primary-button-bg: #{$palette-peach-kisser};
+  // Inputs
+  --input-bg: #{$palette-white};
+  --input-box-shadow: 0px 0px 12px 0px #57ccc940;
+  --input-outline: var(--primary-tint);
+  // Disabled
+  --input-disabled-border: var(--primary-tint);
+  // Focused
+  --input-focused-text: var(--primary-surface);
+  --input-focused-box-shadow: var(--input-box-shadow);
+  // Active
+  --input-active-text: var(--primary-surface);
+  --input-active-box-shadow: none;
+  --input-active-border: 1px solid var(--primary-surface);
+}
