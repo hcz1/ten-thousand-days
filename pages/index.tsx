@@ -4,7 +4,7 @@ import style from "./home.module.scss";
 import Form from "../components/Form";
 import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
-import planet from "../public/planet.svg";
+import planet from "../public/planet_2x.png";
 
 let didInit = false;
 const Home: NextPage = () => {
