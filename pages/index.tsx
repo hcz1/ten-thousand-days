@@ -3,7 +3,6 @@ import Image from "next/image";
 import style from "./home.module.scss";
 import Form from "../components/Form";
 import { useEffect, useState } from "react";
-import Head from "next/head";
 import Nav from "../components/Nav";
 
 let didInit = false;
@@ -22,12 +21,6 @@ const Home: NextPage = () => {
   // }, []);
   return (
     <div className={style.container}>
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-        />
-      </Head>
       <Nav />
       <Form />
       <div className={style.counter}>
