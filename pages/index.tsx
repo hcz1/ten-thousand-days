@@ -5,6 +5,7 @@ import Form from "../components/Form";
 import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import planet from "../public/planet_2x.png";
+import ellipse from "../public/Ellipse.png";
 
 let didInit = false;
 const Home: NextPage = () => {
@@ -36,6 +37,17 @@ const Home: NextPage = () => {
         // width={500}
         alt="Picture of a planet"
       />
+      <div className={style.ellipseContainer}>
+        <Image
+          priority
+          className={style.ellipse}
+          src={ellipse}
+          layout="responsive"
+          // height={400}
+          // width={500}
+          alt="Picture of a planet"
+        />
+      </div>
     </div>
   );
 };
